@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+        <div class="ui stackable grid">
+        <% movieDetails.Search.forEach(movie=>{ %>
+            <div class="three wide column">
+                <a href="/movie/<%=movie.imdbID %>">
+                    <div class="ui segment">
+                        <!-- <div class="ui red ribbon label"><%=movie.Year%></div> -->
+                        <!-- <div class="ui bottom attached label"><%=movie.Title%>(<%=movie.Year%>)</div> -->
+                        <% if( movie.Poster!='N/A'){ %>
+                             <img class="ui small rounded image" src="<%=movie.Poster%>">
+                             <h5 class="ui brown header"><%=movie.Title%> (<%=movie.Year%>)</h5>
+                             <%}else {%>
+                                <img class="ui small rounded image" id="title" src="noimage.jpg">
+                                <h5 class="ui brown header"><%=movie.Title%> (<%=movie.Year%>)</h5>
+                        <% }%>    
+                        </a>
+                    </div>
+                </div>
+                
+        <% })%>
+        </div>
+<% include ./partials/footer %>

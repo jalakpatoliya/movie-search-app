@@ -1,14 +1,30 @@
-
-<img src='<%=movieDetails["data"]["poster_url"] %>'>
-
-<h2><%=movieDetails["data"]["name"] %> -  <%=movieDetails["data"]["year"] %>
-
-<h3>Imdb rating - <%=movieDetails["data"]["rating"] %></h3>
-
-<h3>Director - <%=movieDetails["data"]["director"] %></h3>
-
-<h3>Cast - <%=movieDetails["data"]["stars"] %></h3>
-
-<h3>Genre - <%=movieDetails["data"]["genre"] %></h3>
-
-<a href="/">Search another movie</a>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<br>
+<div class="ui container">
+<div class="ui raised  segment">
+    <div class="ui grid">
+            <div class="six wide column ">
+                <img class="ui rounded medium image"  src='<%=movieDetails["Poster"]%>'>
+            </div>
+    
+            <div class="nine wide column ">
+                
+                    <h1 class="ui red    header"><%=movieDetails["Title"] %>(<%=movieDetails["Year"] %>)
+                    <h5 class="ui blue   header">Imdb rating - <%=movieDetails["imdbRating"] %></h5>
+                    <h5 class="ui blue   header">Director - <%=movieDetails["Director"] %></h5>
+                    <h5 class="ui blue   header">Cast - <%=movieDetails["Actors"] %></h5>
+                    <h5 class="ui blue   header">Runtime - <%=movieDetails["Runtime"]%></h5>
+                    <h5 class="ui blue   header">Writer - <%=movieDetails["Writer"]%></h5>
+                    <h5 class="ui blue   header">Language - <%=movieDetails["Language"]%></h5>
+                    <h5 class="ui blue   header">Country - <%=movieDetails["Country"]%></h5>
+                    <h5 class="ui blue   header">Released - <%=movieDetails["Released"]%></h5>
+                    <h5 class="ui blue   header">Awards - <%=movieDetails["Awards"]%></h5>
+                    <h5 class="ui blue   header">Plot - <%=movieDetails["Plot"]%></h5>
+                
+            </div>
+            <div class="one wide column">
+                <a href="/"><i class="close icon"></i></a>
+            </div>
+        </div>    
+    </div><br>
+<% include ./partials/footer %>

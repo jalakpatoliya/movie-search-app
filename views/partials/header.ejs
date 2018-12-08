@@ -2,12 +2,20 @@
 <br>
 <div class="ui container">
     <form id="form" class="ui form" action="/movieLists" method="get">
-        <div class="five fields">
-            <div class="field">
-                <input type="text" placeholder="Type movie title" name="search">
+        <div class="six fields">
+            <!-- <img src="/logo.png" alt="not dislayed"> -->
+            <!-- <div class="ui raised segment"> -->
+                <div class="field"><a href="/"><img class="ui small image" src="/logo3.png" alt="not dislayed"></a></div>
+                <div class="field">
+                    <input type="text" placeholder="Type movie title" name="search">
+                </div>
+                <div class="field">
+                    <button class="ui button" type="submit">Search</button>
+                </div>
+                <div class="field"></div>
+                <div class="field"></div>
+                <div class="field"><a href=""><img class="ui mini image" onclick="history.go(-1);return false;" src="/back.png" alt="not dislayed"></a></div>
+                <!-- </div> -->
             </div>
-            <div class="ui field">
-                <button class="ui button" type="submit">Search</button>
-            </div>
-        </div>
-    </form>
+        </form>
+        
